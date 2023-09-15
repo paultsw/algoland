@@ -1,0 +1,139 @@
+* TODO Algorithm Land
+** ML Algorithms & Theory
+# See also: https://en.wikipedia.org/wiki/Outline_of_machine_learning#Machine_learning_algorithms
+# See also: Kevin P Murphy, "Machine Learning: a probabilistic perspective"
++ [ ] classic regression:
+  - linear regression
+  - logistic regression
++ [ ] clustering:
+  - k-means
+  - dbscan
++ [ ] tree-based models
+  - decision trees
+  - bagging
+  - boosting
+  - gradient boosting regression trees
+  - packages: catboost, xgboost
++ [ ] support vector machines
+  - review popular kernels
+  - review "kernel methods" broadly
++ [ ] expectation-maximization
++ [ ] gaussian mixture models
++ [ ] variational bayes
++ [ ] maximum likelihood estimator
++ [ ] sampling methods (importance, reservoir, etc)
++ [ ] markov chain monte carlo algorithms
++ [ ] gradient descent
++ [ ] kl-divergence
++ [ ] cross-entropy
++ [ ] poisson loss
++ [ ] connectionist temporal classification (CTC loss)
++ [ ] hidden markov models (viterbi, baum-welch, etc)
++ [ ] NLP
+  - latent dirichlet allocation
+  - n-grams, skip-grams
+  - packages: spaCy, gensim
+  - what's "density estimation"? relation to language models?
+  - tf-idf
+# --- Deep Learning
++ [ ] RNNs
+  - GRUs, LSTMs
+  - how to do dropout in an RNN?
++ [ ] CNNs / Computer Vision
+  - feature visualization for InceptionNet and VGG-19
+  - review a glossary of famous comp vision models
+  - review wavenet-style models with dilations
+  - explain "locally-connected"
+  - filter-size selections
+  - zero-padding the ends
+  - explain: purpose of 1x1 convolutions
+  - FFT-based convolutions vs winograd-based convolutions
+  - pooling at each step of the CNN
+  - package: openCV
++ [ ] autoencoders (incl. variational)
++ [ ] attention layers and self-attention
+  - single-headed vs multi-headed attention?
+  - implement attention layer via matmuls
++ [ ] transfer learning
++ [ ] bayesian neural networks
++ [ ] generative-adversarial networks (GANs)
+  - general architecture of GANs
+  - training GANs (and GAN tricks broadly)
++ [ ] Graph neural networks
++ [ ] batch normalization, layer normalization, instance normalization
++ [ ] dropout
++ [ ] sgd algos: adam, adamax, momentum, (...etc)
++ [ ] reinforcement learning
+  - (re-read primer and skim textbook)
+  - exploration vs exploitation
+  - multi-armed bandits & contextual bandits
+  - finite vs infinite horizons
+  - policy functions and reward functions
+  - SARSA
+  - model-based vs model-free
+  - how do you deploy reinforcement learning "in the wild"? (open-ended; read case studies)
+# (... TODO: more here ...)
+# --- Theory
++ [ ] gram-schmidt
++ [ ] jacobians
++ [ ] hessians
++ [ ] inner and outer products
++ [ ] random variables: definition, formalization
++ [ ] change of variables
++ [ ] precision-recall, f1, etc
++ [ ] type 1 and 2 errors (memorize entire table)
+# (... todo: more theory here ...)
++ [ ] Distributions (memorize properties & pdfs/pmfs)
+  - Bernoulli
+  - Binomial
+  - Normal
+  - Student-t
+  - multinoulli
+  - categorical
+  - dirichlet
+  - beta
+  - gamma (incl. exponential, other special cases)
+  - poisson
+  - multivariate normal
+  - multivariate student-t
+  # (... todo: find more distributions here ...)
+** Advanced Algos & Data Structures
+# (See "Introduction to Algorithms" by CRLS for more.)
+# https://en.wikipedia.org/wiki/List_of_data_structures
+# https://en.wikipedia.org/wiki/List_of_algorithms
+# --- misc
++ [ ] Boyer Moore majority vote
++ [ ] Boyer Moore string search
++ [ ] misra-gries heavy hitters algorithm
++ [ ] busy-beaver algorithm and ackermann function
++ [ ] union-find algorithm
++ [ ] knuth-morris-pratt (string matching) algorithm
++ [ ] Kadane's algorithm (find contiguous subarray with biggest sum)
++ [ ] Fast Fourier Transform
+# --- graphs
++ [ ] heap-based and Queue Based BFS
++ [ ] depth first search
++ [ ] min span tree
+  - prim's algorithm
+  - kruskal's algorithm
++ [ ] dijkstra's algorithm
++ [ ] all-pairs shortest paths
++ [ ] transitive closure
++ [ ] floyd-warshall
++ [ ] A*-search
++ [ ] edmonds-karp
++ [ ] min-cut/max-flow
++ [ ] topological sort
+# --- probabilistic ds
++ [ ] bloom filters
+# --- trees & heaps
++ [ ] binary search
++ [ ] heaps & priority queues
++ [ ] treaps
+# --- sort & search
++ [ ] heapsort
++ [ ] quicksort
++ [ ] merge sort
++ [ ] bubble sort
++ [ ] insertion sort
++ [ ] selection sort
