@@ -1,10 +1,19 @@
 * TODO Algorithm Land
+** Website
++ [-] wrap up first few files
++ [-] write posts
++ [ ] integrate the hacker github pages theme
++ [ ] set up github pages
++ [ ] link github pages to https://algorithm.land (which we own for 2 years)
 ** ML Algorithms & Theory
 # See also: https://en.wikipedia.org/wiki/Outline_of_machine_learning#Machine_learning_algorithms
 # See also: Kevin P Murphy, "Machine Learning: a probabilistic perspective"
 + [ ] classic regression:
   - linear regression
   - logistic regression
++ [ ] generalized linear models
+  - poisson regression
+  - (... etc: more here ...)
 + [ ] clustering:
   - k-means
   - dbscan
@@ -24,17 +33,27 @@
 + [ ] sampling methods (importance, reservoir, etc)
 + [ ] markov chain monte carlo algorithms
 + [ ] gradient descent
-+ [ ] kl-divergence
-+ [ ] cross-entropy
-+ [ ] poisson loss
++ [ ] loss functions:
+  + kl-divergence
+  + cross-entropy
+  + poisson loss
 + [ ] connectionist temporal classification (CTC loss)
-+ [ ] hidden markov models (viterbi, baum-welch, etc)
++ [ ] hidden markov models
+  + viterbi
+  + baum-welch
+  + (etc)
 + [ ] NLP
   - latent dirichlet allocation
   - n-grams, skip-grams
   - packages: spaCy, gensim
   - what's "density estimation"? relation to language models?
   - tf-idf
++ [ ] planning and optimization
+  - bellman's equation
+  - (... TODO: relationship to physics ...)
+  - (... TODO: relationship to AI ...)
++ [ ] integer programming
+  - (... TODO: lots to say about this ...)
 # --- Deep Learning
 + [ ] RNNs
   - GRUs, LSTMs
@@ -105,31 +124,40 @@
 + [ ] Boyer Moore majority vote
 + [ ] Boyer Moore string search
 + [ ] misra-gries heavy hitters algorithm
-+ [ ] busy-beaver algorithm and ackermann function
-+ [ ] union-find algorithm
 + [ ] knuth-morris-pratt (string matching) algorithm
 + [ ] Kadane's algorithm (find contiguous subarray with biggest sum)
-+ [ ] Fast Fourier Transform
+# -  -  -
++ [ ] busy-beaver algorithm and ackermann function
++ [ ] union-find algorithm / disjoint-set data structure
 # --- graphs
 + [ ] heap-based and Queue Based BFS
 + [ ] depth first search
-+ [ ] min span tree
-  - prim's algorithm
-  - kruskal's algorithm
-+ [ ] dijkstra's algorithm
-+ [ ] all-pairs shortest paths
 + [ ] transitive closure
-+ [ ] floyd-warshall
-+ [ ] A*-search
-+ [ ] edmonds-karp
-+ [ ] min-cut/max-flow
 + [ ] topological sort
++ [X] min span tree
+  - [X] prim's algorithm
+  - [X] kruskal's algorithm
++ [-] shortest paths
+  - [X] dijkstra's algorithm
+  - [-] floyd-warshall
+  - [-] bellman-ford
+  - [ ] all-pairs shortest paths
+  - [ ] A*-search
+  - [ ] K-shortest path routing: https://en.wikipedia.org/wiki/K_shortest_path_routing
+  - [ ] johnson's algorithm (for all-pairs shortest paths)
+  - [ ] suurballe's algorithm
+  - See more at: https://en.wikipedia.org/wiki/Shortest_path_problem
++ [ ] flows
+  - [ ] edmonds-karp
+  - [ ] min-cut/max-flow
 # --- probabilistic ds
-+ [ ] bloom filters
++ [X] bloom filters
 # --- trees & heaps
 + [ ] binary search
-+ [ ] heaps & priority queues
++ [ ] tries
++ [ ] (binary) heaps & priority queues
 + [ ] treaps
++ [ ] fibonacci heap
 # --- sort & search
 + [ ] heapsort
 + [ ] quicksort
@@ -137,3 +165,5 @@
 + [ ] bubble sort
 + [ ] insertion sort
 + [ ] selection sort
+# --- mathematics
++ [ ] Fast Fourier Transform
