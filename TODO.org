@@ -1,10 +1,11 @@
 * TODO Algorithm Land
 ** Website
-+ [-] wrap up first few files
-+ [-] write posts
-+ [ ] integrate the hacker github pages theme
-+ [ ] set up github pages
-+ [ ] link github pages to https://algorithm.land (which we own for 2 years)
++ [X] 1. wrap up first few files
++ [-] 2. write first few posts
++ [ ] 3. set up github pages website
+  - use docsifyJS? (cleaner than jekyll?)
+  - distill template? ( https://github.com/distillpub/template / https://distill.pub/guide/ )
++ [ ] 4. link github pages to https://algorithm.land (which we own for 2 years)
 ** ML Algorithms & Theory
 # See also: https://en.wikipedia.org/wiki/Outline_of_machine_learning#Machine_learning_algorithms
 # See also: Kevin P Murphy, "Machine Learning: a probabilistic perspective"
@@ -126,19 +127,38 @@
 + [ ] misra-gries heavy hitters algorithm
 + [ ] knuth-morris-pratt (string matching) algorithm
 + [ ] Kadane's algorithm (find contiguous subarray with biggest sum)
++ [ ] floyd's tortoise-and-hare algorithm (for cycle detection)
++ [ ] Manacher's algorithm (for finding palindromes)
 # -  -  -
 + [ ] busy-beaver algorithm and ackermann function
 + [ ] union-find algorithm / disjoint-set data structure
+# -  -  -
++ [ ] greedy algorithms (writeup)
+  - proving the matroid property
+  - identifying the optimal substructure property
+  - designing greedy algorithms on graphs and arrays
+  - fractional knapsack
+  - https://leetcode.com/discuss/general-discussion/1061059/ABCs-of-Greedy
+  - http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/chap17.htm
+  - https://leetcode.com/discuss/general-discussion/969327/graph-algorithms-one-place-dijkstra-bellman-ford-floyd-warshall-prims-kruskals-dsu
+# -  -  -
++ [ ] dynamic programming
+  - bellman's algorithm
+  - 0/1 knapsack problem
+  - https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns
 # --- graphs
 + [ ] heap-based and Queue Based BFS
 + [ ] depth first search
 + [ ] transitive closure
 + [ ] topological sort
-+ [X] min span tree
-  - [X] prim's algorithm
++ [-] min span tree
   - [X] kruskal's algorithm
+  - [-] prim's algorithm
+  - [ ] boruvka's algorithm (https://en.wikipedia.org/wiki/Bor%C5%AFvka%27s_algorithm)
++ [ ] steiner trees
++ [ ] low-degree spanning trees
 + [-] shortest paths
-  - [X] dijkstra's algorithm
+  - [-] dijkstra's algorithm
   - [-] floyd-warshall
   - [-] bellman-ford
   - [ ] all-pairs shortest paths
@@ -150,15 +170,34 @@
 + [ ] flows
   - [ ] edmonds-karp
   - [ ] min-cut/max-flow
++ [ ] eulerian circuits
+  - Hierholzer's algorithm:  https://en.wikipedia.org/wiki/Eulerian_path#Hierholzer's_algorithm
+  - Fleury's algorithm: https://en.wikipedia.org/wiki/Eulerian_path#Fleury's_algorithm
++ [ ] bipartite matching
+  - hungarian algorithm
+  - (...)
++ [ ] job scheduling
+  - (...)
 # --- probabilistic ds
 + [X] bloom filters
 # --- trees & heaps
-+ [ ] binary search
++ [ ] traversals: in-order, post-order, pre-order
++ [ ] binary search trees
 + [ ] tries
-+ [ ] (binary) heaps & priority queues
-+ [ ] treaps
-+ [ ] fibonacci heap
++ [ ] b-trees
++ [ ] red-black trees
++ [ ] interval trees
++ [ ] union-find (disjoint-set) data structure
+# -  -  -
++ [-] (binary) heaps & priority queues
++ [-] treaps
++ [-] fibonacci heap
+# -  -  -
++ [ ] k-d trees
++ [ ] fenwick trees (or binary indexed trees)
+  - https://leetcode.com/discuss/interview-question/4153767/All-you-need-to-know-about-BIT
 # --- sort & search
++ [ ] binary search
 + [ ] heapsort
 + [ ] quicksort
 + [ ] merge sort
@@ -167,3 +206,4 @@
 + [ ] selection sort
 # --- mathematics
 + [ ] Fast Fourier Transform
++ [ ] Levenberg–Marquardt algorithm
