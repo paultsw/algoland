@@ -208,6 +208,12 @@ def fn(arr):
         ans.append(c)
     return "".join(ans)
 
+def fn(arr):
+    ans = []
+    for c in arr:
+        ans.append(c)
+    return "".join(ans)
+
 ##########
 # LINKED LIST -- FAST AND SLOW POINTERS
 # 
@@ -236,6 +242,26 @@ def fn(head):
 
     return ans
 
+def fn(head):
+    slow = head
+    fast = head
+    ans = 0
+    while fast and fast.next:
+        # DO LOGIC HERE
+        slow = slow.next # 1 hop
+        fast = fast.next.next # 2 hops
+    return ans
+
+def fn(head):
+    slow = head
+    fast = head
+    ans = 0
+    while fast and fast.next:
+        # DO LOGIC HERE TO UPDATE ANS
+        slow = slow.next
+        fast = fast.next.next
+    return ans
+
 ##########
 # REVERSING A LINKED LIST
 # 
@@ -260,6 +286,24 @@ def fn(head):
         curr.next = prev
         prev = curr
         curr = next_node
+
+def fn(head):
+    curr = head
+    prev = None
+    while curr:
+        next_node = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next_node
+
+def fn(head):
+    curr = head
+    prev = None
+    while curr:
+        next_node = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next.node
 
 ##########
 # FIND NUMBER OF SUBARRAYS FITTING AN EXACT CRITERION
@@ -290,6 +334,28 @@ def fn(arr, k):
         counts[curr] += 1
     return ans
 
+
+def fn(arr, k):
+    counts = defaultdict(int)
+    counts[0] = 1
+    ans = curr = 0
+    for num in arr:
+        # DO LOGIC TO CHANGE curr HERE
+        ans += counts[curr - k]
+        counts[curr] += 1
+    return ans
+
+
+def fn(arr, k):
+    counts = defaultdict(int)
+    counts[0] = 1
+    ans = curr = 0
+    for num in arr:
+        # DO LOGIC TO CHANGE curr HERE
+        ans += counts[curr - k] # window of size k
+        counts[curr] += 1
+    return ans
+
 ##########
 # MONOTONIC INCREASING STACK
 # 
@@ -313,6 +379,29 @@ def fn(arr):
     ans = 0
     for num in arr:
         # NOTE: for monotonic *decreasing*, just flip > to <
+        while stack and stack[-1] > num:
+            # DO LOGIC HERE
+            stack.pop()
+        stack.append(num)
+    return ans
+
+
+def fn(arr):
+    stack = []
+    ans = 0
+    for num in arr:
+        # NOTE: for monotonic decrease, flip > to <
+        while stack and stack[-1] > num:
+            # DO LOGIC HERE
+            stack.pop()
+        stack.append(num)
+    return ans
+
+
+def fn(arr):
+    stack = []
+    ans = 0
+    for num in arr:
         while stack and stack[-1] > num:
             # DO LOGIC HERE
             stack.pop()
@@ -349,6 +438,34 @@ def dfs(root):
 
     return ans
 
+
+def dfs(root):
+    # base case:
+    if not root:
+        return
+
+    ans = 0
+    # DO LOGIC HERE TO and
+
+    # recursive case:
+    dfs(root.left)
+    dfs(root.right)
+
+    return ans
+
+
+def dfs(root):
+    if not root:
+        return
+
+    ans = 0
+    # DO LOGIC HERE TO ans
+
+    dfs(root.left)
+    dfs(root.right)
+
+    return ans
+
 ##########
 # BINARY TREE -- DFS (Iterative)
 # 
@@ -368,6 +485,45 @@ def dfs(root):
 
 
 # ----- practice rewriting the above:
+def dfs(root):
+    stack = [root]
+    ans = 0
+    while stack:
+        node = stack.pop()
+        # DO LOGIC HERE
+        if node.left:
+            stack.append(node.left)
+        if node.right:
+            stack.append(node.right)
+    return ans
+
+
+def dfs(root):
+    stack = [root]
+    ans = 0
+    while stack:
+        node = stack.pop()
+        # DO LOGIC HERE
+        if node.left:
+            stack.append(node.left)
+        if node.right:
+            stack.append(node.right)
+    return ans
+
+
+def dfs(root):
+    stack = [root]
+    ans = 0
+    while stack:
+        node = stack.pop()
+        # DO LOGIC HERE
+        if node.left:
+            stack.append(node.left)
+        if node.right:
+            stack.append(node.right)
+    return ans
+
+
 def dfs(root):
     stack = [root]
     ans = 0
@@ -420,6 +576,50 @@ def fn(root):
             if node.right:
                 queue.append(node.right)
     return ans
+
+
+def fn(root):
+    queue = deque([root])
+    ans = 0
+    while queue:
+        current_length = len(queue) # works because we append each level at a time
+        # DO LOGIC HERE FOR CURRENT LEVEL
+        for _ in range(current_length):
+            node = queue.popleft()
+            # DO LOGIC HERE ON node
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+    return ans
+
+
+##########
+# BINARY TREE --- TRAVERSALS.
+# (In-Order, Pre-Order, Post-Order.)
+# Also: boundary-order, Level-Order, Diagonal-Order;
+# See: https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.val)
+        inorder(root.right)
+
+def preorder(root):
+    if root:
+        print(root.val)
+        preorder(root.left)
+        preorder(root.right)
+
+def postorder(root):
+    if root:
+        preorder(root.left)
+        preorder(root.right)
+        print(root.val)
+
+# ----- practice rewriting the above:
+# TODO
 
 ##########
 # GRAPH -- DFS (Recursive)
@@ -497,6 +697,8 @@ def fn(graph):
                 seen.add(nbr)
                 stack.append(nbr)
     return ans
+
+
 ##########
 # GRAPH -- BFS
 # 
@@ -1062,14 +1264,47 @@ def dijkstra(graph,source,n):
 ##########
 # UNION-FIND DATA STRUCTURE
 # 
+# (N.B.1: this implements union-by-rank. Not the only approach!)
+# (N.B.2: amortized over n operations, grows at very slow ackermann function.)
+class UnionFind:
+    def __init__(self, grid):
+        self.ncomponents = 0
+        self.parents = {}
+        self.ranks = {}
+        # populate the parents & ranks; update ncomponents:
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == 1:
+                    # found a 1; make it its own island
+                    self.parents[(i,j)] = (i,j)
+                    self.ncomponents += 1
+                self.ranks[(i,j)] = 0
+
+    def find(self, x):
+        if self.parents[x] != x:
+            self.parents[x] = self.find(self.parents[x])
+        return self.parents[x]
+    
+    def union(self, x, y):
+        par_x = self.find(x)
+        par_y = self.find(y)
+        if par_x != par_y:
+            if (self.ranks[par_x] > self.ranks[par_y]):
+                self.parents[par_y] = par_x
+            elif (self.ranks[par_y] > self.ranks[par_x]):
+                self.parents[par_x] = par_y
+            else:
+                self.parents[par_y] = par_x
+                self.ranks[par_x] += 1
+            self.ncomponents -= 1
 
 
 ##########
 # KRUSKAL'S ALGORITHM (MST)
 # 
-def kruskals_mst(self):
+def kruskals_mst(graph):
     # Resulting tree
-    result = []
+    mst = []
     
     # Iterator
     i = 0
@@ -1077,54 +1312,53 @@ def kruskals_mst(self):
     e = 0
 
     # Sort edges by their weight
-    self.m_graph = sorted(self.m_graph, key=lambda item: item[2])
-    
-    # Auxiliary arrays
-    parent = []
-    subtree_sizes = []
+    graph.edges = sorted(graph.edges, key=lambda item: item[2])
 
     # Initialize `parent` and `subtree_sizes` arrays
-    for node in range(self.m_num_of_nodes):
+    for node in range(len(graph.nodes)):
         parent.append(node)
         subtree_sizes.append(0)
+
+    # Initialize union-find structure
+    uf = UnionFind()
 
     # Important property of MSTs
     # number of egdes in a MST is 
     # equal to (m_num_of_nodes - 1)
-    while e < (self.m_num_of_nodes - 1):
+    while e < (len(graph.nodes) - 1):
         # Pick an edge with the minimal weight
-        node1, node2, weight = self.m_graph[i]
+        node1, node2, weight = graph.edges[i]
         i = i + 1
 
-        x = self.find_subtree(parent, node1)
-        y = self.find_subtree(parent, node2)
+        x = uf.find(node1)
+        y = uf.find(node2)
 
         if x != y:
             e = e + 1
-            result.append([node1, node2, weight])
-            self.connect_subtrees(parent, subtree_sizes, x, y)
+            mst.append([node1, node2, weight])
+            uf.union(x, y)
     
-    # Print the resulting MST
-    for node1, node2, weight in result:
-        print("%d - %d: %d" % (node1, node2, weight))
+    # return MST:
+    return mst
 
 
 ##########
 # PRIM'S ALGORITHM (MST)
-# 
+#
+from math import inf
 def prims(graph):
     # used to pick minimum weight edge
-    key = [self.INF for _ in range(self.V)]
+    key = [inf for _ in graph.nodes]
     # used to store MST
-    parent = [None for _ in range(self.V)]
+    parent = [None for _ in graph.nodes]
     # pick a random vertex, ie 0
     key[0] = 0
     # create list for t/f if a node is connected to the MST
-    mstSet = [False for _ in range(self.V)]
+    mstSet = [False for _ in graph.nodes]
      # set the first node to the root (ie have a parent of -1)
     parent[0] = -1
 
-    for _ in range(self.V):
+    for _ in graph.nodes:
         # 1) pick the minimum distance vertex from the current key
         # from the set of points not yet in the MST
         u = self.minKey(key, mstSet)
@@ -1133,14 +1367,14 @@ def prims(graph):
 
         # loop through the vertices to update the ones that are still
         # not in the MST
-        for v in range(self.V):
+        for v in graph.nodes:
             # if the edge from the newly added vertex (v) exists,
             # the vertex hasn't been added to the MST, and
             # the new vertex's distance to the graph is greater than the distance
             # stored in the initial graph, update the "key" value to the
             # distance initially given and update the parent of
             # of the vertex (v) to the newly added vertex (u)
-            if self.graph[u][v] > 0 and mstSet[v] == False and key[v] > self.graph[u][v]:
-                key[v] = self.graph[u][v]
+            if graph[u][v] > 0 and mstSet[v] == False and key[v] > graph[u][v]:
+                key[v] = graph[u][v]
                 parent[v] = u
 

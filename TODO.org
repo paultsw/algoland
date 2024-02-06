@@ -129,6 +129,7 @@
 + [ ] Kadane's algorithm (find contiguous subarray with biggest sum)
 + [ ] floyd's tortoise-and-hare algorithm (for cycle detection)
 + [ ] Manacher's algorithm (for finding palindromes)
++ [ ] rabin-karp & bitmasks (both for string pattern matching)
 # -  -  -
 + [ ] busy-beaver algorithm and ackermann function
 + [ ] union-find algorithm / disjoint-set data structure
@@ -166,18 +167,22 @@
   - [ ] K-shortest path routing: https://en.wikipedia.org/wiki/K_shortest_path_routing
   - [ ] johnson's algorithm (for all-pairs shortest paths)
   - [ ] suurballe's algorithm
+  - [ ] seidel's algorithm
   - See more at: https://en.wikipedia.org/wiki/Shortest_path_problem
 + [ ] flows
   - [ ] edmonds-karp
   - [ ] min-cut/max-flow
+  - [ ] augmenting paths (concept)
 + [ ] eulerian circuits
   - Hierholzer's algorithm:  https://en.wikipedia.org/wiki/Eulerian_path#Hierholzer's_algorithm
   - Fleury's algorithm: https://en.wikipedia.org/wiki/Eulerian_path#Fleury's_algorithm
 + [ ] bipartite matching
   - hungarian algorithm
-  - (...)
+  - hopcroft-karp[-karzanov] algorithm
 + [ ] job scheduling
-  - (...)
++ [ ] drawing graphs on 2D plane
+  - spectral layout methods (using the spectral properties of the adjacency matrix)
+  - force-based layout methods (using analogies to molecular mechanics)
 # --- probabilistic ds
 + [X] bloom filters
 # --- trees & heaps
@@ -204,6 +209,14 @@
 + [ ] bubble sort
 + [ ] insertion sort
 + [ ] selection sort
-# --- mathematics
+# --- miscellaneous mathematics
 + [ ] Fast Fourier Transform
 + [ ] Levenberg–Marquardt algorithm
+# --- game theory
++ [ ] minimax (minimizing the maximum loss)
++ [ ] maximin (maximizing the minimum gain)
+# --- randomized algorithms
++ [ ] overview of monte-carlo versus las vegas algorithms
++ [ ] stratified sampling
++ [ ] monte-carlo sampling
++ ( ... et cetera ... )

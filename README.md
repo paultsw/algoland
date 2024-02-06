@@ -3,6 +3,8 @@
 
 `algorithm.land` is a directory of algorithms, data structures, and machine learning models implemented in python for autodidactic purposes.
 
+It is served at `https://algorithm.land` and is based on [Hugo](https://gohugo.io/) and uses the [book](https://github.com/alex-shpak/hugo-book) theme by Alex Shpak.
+
 Currently, we have the following sections and subcategories listed below.
 
 
@@ -26,7 +28,6 @@ The genesis of this project was that:
 1) I'm somewhat obsessive-compulsive about collecting and cataloguing knowledge; and
 2) I had to prepare for technical interviews.
 
-
 License
 -------
-GPL-3
+GPL-3 (aside from the use of upstream dependencies, e.g. Hugo and theme).
