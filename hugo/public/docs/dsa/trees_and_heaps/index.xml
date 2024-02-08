@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algo Land!</title>
+    <link>https://algorithm.land/docs/dsa/trees_and_heaps/</link>
+    <description>Recent content on Algo Land!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://algorithm.land/docs/dsa/trees_and_heaps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Heaps and Priority Queues</title>
+      <link>https://algorithm.land/docs/dsa/trees_and_heaps/binary_heaps_priority_queues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/trees_and_heaps/binary_heaps_priority_queues/</guid>
+      <description>what&amp;rsquo;s a binary heap? # TODO&#xA;what&amp;rsquo;s a priority queue? # TODO&#xA;implementing pq&amp;rsquo;s with heaps # TODO</description>
+    </item>
+    <item>
+      <title>Fibonacci Heaps</title>
+      <link>https://algorithm.land/docs/dsa/trees_and_heaps/fibonacci_heaps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/trees_and_heaps/fibonacci_heaps/</guid>
+      <description>fibonacci heaps # TODO</description>
+    </item>
+    <item>
+      <title>Treaps</title>
+      <link>https://algorithm.land/docs/dsa/trees_and_heaps/treaps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/trees_and_heaps/treaps/</guid>
+      <description>what are treaps? # TODO</description>
+    </item>
+  </channel>
+</rss>

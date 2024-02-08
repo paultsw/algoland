@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Algo Land!</title>
+    <link>https://algorithm.land/posts/</link>
+    <description>Recent content in Posts on Algo Land!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Feb 2024 21:48:22 -0500</lastBuildDate>
+    <atom:link href="https://algorithm.land/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Algoland!</title>
+      <link>https://algorithm.land/posts/intro-algoland/</link>
+      <pubDate>Mon, 05 Feb 2024 21:48:22 -0500</pubDate>
+      <guid>https://algorithm.land/posts/intro-algoland/</guid>
+      <description>What&amp;rsquo;s all this then? # Just a big ole repository of algorithms and techniques from classical data structures and algorithms, some advanced DSA, and some machine learning techniques.</description>
+    </item>
+  </channel>
+</rss>

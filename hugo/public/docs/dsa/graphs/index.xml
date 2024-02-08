@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algo Land!</title>
+    <link>https://algorithm.land/docs/dsa/graphs/</link>
+    <description>Recent content on Algo Land!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://algorithm.land/docs/dsa/graphs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Min Span Trees</title>
+      <link>https://algorithm.land/docs/dsa/graphs/min_span_trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/graphs/min_span_trees/</guid>
+      <description>minimum spanning trees # Say you have a graph G. A minimum spanning tree (or MST, or min span tree) is a ...TODO...&#xA;kruskal&amp;rsquo;s algorithm # Kruskal&amp;rsquo;s algorithm builds an MST by ...&#xA;prim&amp;rsquo;s algorithm # Compared to Kruskal, Prim&amp;rsquo;s algorithm uses ...&#xA;boruvka&amp;rsquo;s algorithm # Now we&amp;rsquo;re getting deep into the weeds here. ...</description>
+    </item>
+    <item>
+      <title>Shortest Paths</title>
+      <link>https://algorithm.land/docs/dsa/graphs/shortest_paths/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/graphs/shortest_paths/</guid>
+      <description>shortest path problems # Given a graph G, you often want to find the shortest path from one node to another. TODO: elaborate here&#xA;dijkstra&amp;rsquo;s algorithm # The classic.&#xA;floyd-warshall # TODO&#xA;bellman-ford # TODO</description>
+    </item>
+  </channel>
+</rss>

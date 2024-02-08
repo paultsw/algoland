@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to Algoland! on Algo Land!</title>
+    <link>https://algorithm.land/</link>
+    <description>Recent content in Welcome to Algoland! on Algo Land!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Feb 2024 21:48:22 -0500</lastBuildDate>
+    <atom:link href="https://algorithm.land/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Heaps and Priority Queues</title>
+      <link>https://algorithm.land/docs/dsa/trees_and_heaps/binary_heaps_priority_queues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/trees_and_heaps/binary_heaps_priority_queues/</guid>
+      <description>what&amp;rsquo;s a binary heap? # TODO&#xA;what&amp;rsquo;s a priority queue? # TODO&#xA;implementing pq&amp;rsquo;s with heaps # TODO</description>
+    </item>
+    <item>
+      <title>Bloom Filters</title>
+      <link>https://algorithm.land/docs/dsa/probabilistic/bloom_filters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/probabilistic/bloom_filters/</guid>
+      <description>probabilistic retrieval from a fuzzy set # TODO</description>
+    </item>
+    <item>
+      <title>Fibonacci Heaps</title>
+      <link>https://algorithm.land/docs/dsa/trees_and_heaps/fibonacci_heaps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/trees_and_heaps/fibonacci_heaps/</guid>
+      <description>fibonacci heaps # TODO</description>
+    </item>
+    <item>
+      <title>Min Span Trees</title>
+      <link>https://algorithm.land/docs/dsa/graphs/min_span_trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/graphs/min_span_trees/</guid>
+      <description>minimum spanning trees # Say you have a graph G. A minimum spanning tree (or MST, or min span tree) is a ...TODO...&#xA;kruskal&amp;rsquo;s algorithm # Kruskal&amp;rsquo;s algorithm builds an MST by ...&#xA;prim&amp;rsquo;s algorithm # Compared to Kruskal, Prim&amp;rsquo;s algorithm uses ...&#xA;boruvka&amp;rsquo;s algorithm # Now we&amp;rsquo;re getting deep into the weeds here. ...</description>
+    </item>
+    <item>
+      <title>Shortest Paths</title>
+      <link>https://algorithm.land/docs/dsa/graphs/shortest_paths/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/graphs/shortest_paths/</guid>
+      <description>shortest path problems # Given a graph G, you often want to find the shortest path from one node to another. TODO: elaborate here&#xA;dijkstra&amp;rsquo;s algorithm # The classic.&#xA;floyd-warshall # TODO&#xA;bellman-ford # TODO</description>
+    </item>
+    <item>
+      <title>Treaps</title>
+      <link>https://algorithm.land/docs/dsa/trees_and_heaps/treaps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/dsa/trees_and_heaps/treaps/</guid>
+      <description>what are treaps? # TODO</description>
+    </item>
+    <item>
+      <title>Welcome to Algoland!</title>
+      <link>https://algorithm.land/posts/intro-algoland/</link>
+      <pubDate>Mon, 05 Feb 2024 21:48:22 -0500</pubDate>
+      <guid>https://algorithm.land/posts/intro-algoland/</guid>
+      <description>What&amp;rsquo;s all this then? # Just a big ole repository of algorithms and techniques from classical data structures and algorithms, some advanced DSA, and some machine learning techniques.</description>
+    </item>
+  </channel>
+</rss>

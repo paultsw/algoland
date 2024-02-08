@@ -1,11 +1,4 @@
 * TODO Algorithm Land
-** Website
-+ [X] 1. wrap up first few files
-+ [-] 2. write first few posts
-+ [ ] 3. set up github pages website
-  - use docsifyJS? (cleaner than jekyll?)
-  - distill template? ( https://github.com/distillpub/template / https://distill.pub/guide/ )
-+ [ ] 4. link github pages to https://algorithm.land (which we own for 2 years)
 ** ML Algorithms & Theory
 # See also: https://en.wikipedia.org/wiki/Outline_of_machine_learning#Machine_learning_algorithms
 # See also: Kevin P Murphy, "Machine Learning: a probabilistic perspective"
@@ -92,7 +85,6 @@
   - SARSA
   - model-based vs model-free
   - how do you deploy reinforcement learning "in the wild"? (open-ended; read case studies)
-# (... TODO: more here ...)
 # --- Theory
 + [ ] gram-schmidt
 + [ ] jacobians
@@ -102,8 +94,7 @@
 + [ ] change of variables
 + [ ] precision-recall, f1, etc
 + [ ] type 1 and 2 errors (memorize entire table)
-# (... todo: more theory here ...)
-+ [ ] Distributions (memorize properties & pdfs/pmfs)
++ [ ] Probability Distributions (memorize properties & pdfs/pmfs)
   - Bernoulli
   - Binomial
   - Normal
@@ -116,7 +107,6 @@
   - poisson
   - multivariate normal
   - multivariate student-t
-  # (... todo: find more distributions here ...)
 ** Advanced Algos & Data Structures
 # (See "Introduction to Algorithms" by CRLS for more.)
 # https://en.wikipedia.org/wiki/List_of_data_structures
@@ -129,11 +119,11 @@
 + [ ] Kadane's algorithm (find contiguous subarray with biggest sum)
 + [ ] floyd's tortoise-and-hare algorithm (for cycle detection)
 + [ ] Manacher's algorithm (for finding palindromes)
-+ [ ] rabin-karp & bitmasks (both for string pattern matching)
++ [-] rabin-karp & bitmasks (both for string pattern matching)
 # -  -  -
 + [ ] busy-beaver algorithm and ackermann function
 + [ ] union-find algorithm / disjoint-set data structure
-# -  -  -
+# --- greedy & dynamic
 + [ ] greedy algorithms (writeup)
   - proving the matroid property
   - identifying the optimal substructure property
@@ -142,7 +132,6 @@
   - https://leetcode.com/discuss/general-discussion/1061059/ABCs-of-Greedy
   - http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/chap17.htm
   - https://leetcode.com/discuss/general-discussion/969327/graph-algorithms-one-place-dijkstra-bellman-ford-floyd-warshall-prims-kruskals-dsu
-# -  -  -
 + [ ] dynamic programming
   - bellman's algorithm
   - 0/1 knapsack problem
@@ -184,7 +173,7 @@
   - spectral layout methods (using the spectral properties of the adjacency matrix)
   - force-based layout methods (using analogies to molecular mechanics)
 # --- probabilistic ds
-+ [X] bloom filters
++ [-] bloom filters
 # --- trees & heaps
 + [ ] traversals: in-order, post-order, pre-order
 + [ ] binary search trees
@@ -209,12 +198,11 @@
 + [ ] bubble sort
 + [ ] insertion sort
 + [ ] selection sort
-# --- miscellaneous mathematics
+# --- mathematics
 + [ ] Fast Fourier Transform
 + [ ] Levenberg–Marquardt algorithm
 # --- game theory
-+ [ ] minimax (minimizing the maximum loss)
-+ [ ] maximin (maximizing the minimum gain)
++ [ ] minimax (minimizing the maximum loss) && maximin (maximizing the minimum gain)
 # --- randomized algorithms
 + [ ] overview of monte-carlo versus las vegas algorithms
 + [ ] stratified sampling
