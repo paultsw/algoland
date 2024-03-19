@@ -12,7 +12,7 @@
       <link>https://algorithm.land/docs/dsa/probabilistic/bloom_filters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://algorithm.land/docs/dsa/probabilistic/bloom_filters/</guid>
-      <description>probabilistic retrieval from a fuzzy set # TODO</description>
+      <description>probabilistic retrieval from a fuzzy set # Bloom filters are motivated by the following question: how do we use a fixed amount of memory to check set-inclusion?&#xA;As always there are tradeoffs. The tradeoff in this case is that we lose certainty &amp;mdash; but what in life is certain, anyway?&#xA;More formally, a bloom filter is a probabilistic data structure &amp;mdash; a data structure that &amp;mdash; which implements the following operations:</description>
     </item>
   </channel>
 </rss>

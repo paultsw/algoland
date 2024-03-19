@@ -3,27 +3,50 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="probabilistic retrieval from a fuzzy set # TODO">
+<meta name="description" content="probabilistic retrieval from a fuzzy set # Bloom filters are motivated by the following question: how do we use a fixed amount of memory to check set-inclusion?
+As always there are tradeoffs. The tradeoff in this case is that we lose certainty &mdash; but what in life is certain, anyway?
+More formally, a bloom filter is a probabilistic data structure &mdash; a data structure that &mdash; which implements the following operations:">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Bloom Filters" />
-<meta property="og:description" content="probabilistic retrieval from a fuzzy set # TODO" />
+<meta property="og:description" content="probabilistic retrieval from a fuzzy set # Bloom filters are motivated by the following question: how do we use a fixed amount of memory to check set-inclusion?
+As always there are tradeoffs. The tradeoff in this case is that we lose certainty &mdash; but what in life is certain, anyway?
+More formally, a bloom filter is a probabilistic data structure &mdash; a data structure that &mdash; which implements the following operations:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://algorithm.land/docs/dsa/probabilistic/bloom_filters/" /><meta property="article:section" content="docs" />
 
-
-
+<meta property="article:modified_time" content="2024-02-08T18:03:58-05:00" />
 <title>Bloom Filters | Algo Land!</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" >
 <link rel="stylesheet" href="/book.min.f8de3645fe00591b41524aee174e19edd98a22255a2930a0cdc82a94835ba387.css" integrity="sha256-&#43;N42Rf4AWRtBUkruF04Z7dmKIiVaKTCgzcgqlINbo4c=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.b53d7daf905e083f86c5ce27d7eca6a12f69993ffac0722d1a1ba2c74b0432da.js" integrity="sha256-tT19r5BeCD&#43;Gxc4n1&#43;ymoS9pmT/6wHItGhuix0sEMto=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.15151e0ffe04bdb9bf92df77a85d9b6366c25f49cb717eb09abb597d1e53ca05.js" integrity="sha256-FRUeD/4Evbm/kt93qF2bY2bCX0nLcX6wmrtZfR5TygU=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
   
+
+  
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+	   extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+  </script>
 </head>
 <body dir="ltr">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
@@ -95,8 +118,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-c08aff4af0aacc99c9de5b87f8ffe1a1" class="toggle"  />
-    <label for="section-c08aff4af0aacc99c9de5b87f8ffe1a1" class="flex justify-between">
+    <input type="checkbox" id="section-5a84af4919a45e840c81da21eaa38ab3" class="toggle"  />
+    <label for="section-5a84af4919a45e840c81da21eaa38ab3" class="flex justify-between">
       <a role="button" class="">Game Theory</a>
     </label>
   
@@ -116,8 +139,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-241378e5e78f0bc54ee337d55f5df9ce" class="toggle"  />
-    <label for="section-241378e5e78f0bc54ee337d55f5df9ce" class="flex justify-between">
+    <input type="checkbox" id="section-20a1a53801e8702f854db6dd1af5da83" class="toggle"  />
+    <label for="section-20a1a53801e8702f854db6dd1af5da83" class="flex justify-between">
       <a role="button" class="">Graphs</a>
     </label>
   
@@ -163,8 +186,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-0b0e3861722eb768008fe0d230b0f5ec" class="toggle"  />
-    <label for="section-0b0e3861722eb768008fe0d230b0f5ec" class="flex justify-between">
+    <input type="checkbox" id="section-ca565d5838475186d8420da7458a6584" class="toggle"  />
+    <label for="section-ca565d5838475186d8420da7458a6584" class="flex justify-between">
       <a role="button" class="">Greedy and Dynamic</a>
     </label>
   
@@ -184,8 +207,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-6c828e2a52c9dc2078602a6762cb0c95" class="toggle"  />
-    <label for="section-6c828e2a52c9dc2078602a6762cb0c95" class="flex justify-between">
+    <input type="checkbox" id="section-99f3a292e0509f9be0472be111fedbea" class="toggle"  />
+    <label for="section-99f3a292e0509f9be0472be111fedbea" class="flex justify-between">
       <a role="button" class="">Mathematics</a>
     </label>
   
@@ -205,8 +228,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-f79415b147ebb98b5e1a0dc81fd2b31a" class="toggle"  />
-    <label for="section-f79415b147ebb98b5e1a0dc81fd2b31a" class="flex justify-between">
+    <input type="checkbox" id="section-50348e37f3ef38b19011ec7f64131308" class="toggle"  />
+    <label for="section-50348e37f3ef38b19011ec7f64131308" class="flex justify-between">
       <a role="button" class="">Miscellaneous</a>
     </label>
   
@@ -226,8 +249,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-aad45008cfd8acbe10bf1c0cdaeef292" class="toggle" checked />
-    <label for="section-aad45008cfd8acbe10bf1c0cdaeef292" class="flex justify-between">
+    <input type="checkbox" id="section-0cc4634caf1d6525f7ab756f165a3485" class="toggle" checked />
+    <label for="section-0cc4634caf1d6525f7ab756f165a3485" class="flex justify-between">
       <a role="button" class="">Probabilistic</a>
     </label>
   
@@ -260,8 +283,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-3bc384ced6c98393b8ec5a2a4d6d6d84" class="toggle"  />
-    <label for="section-3bc384ced6c98393b8ec5a2a4d6d6d84" class="flex justify-between">
+    <input type="checkbox" id="section-ca6653cda1a61ada96a5a2ce91f3a13c" class="toggle"  />
+    <label for="section-ca6653cda1a61ada96a5a2ce91f3a13c" class="flex justify-between">
       <a role="button" class="">Randomized</a>
     </label>
   
@@ -281,8 +304,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-d43fab1fc9c647cc73e059cfe217feed" class="toggle"  />
-    <label for="section-d43fab1fc9c647cc73e059cfe217feed" class="flex justify-between">
+    <input type="checkbox" id="section-053798d66f8da91e91be90210542920d" class="toggle"  />
+    <label for="section-053798d66f8da91e91be90210542920d" class="flex justify-between">
       <a role="button" class="">Sort and Search</a>
     </label>
   
@@ -302,8 +325,8 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-5efb5858d6f2a7f6e85156ff9056995b" class="toggle"  />
-    <label for="section-5efb5858d6f2a7f6e85156ff9056995b" class="flex justify-between">
+    <input type="checkbox" id="section-0bf0c4f127cb0ea9fe74ecd5ac5dffac" class="toggle"  />
+    <label for="section-0bf0c4f127cb0ea9fe74ecd5ac5dffac" class="flex justify-between">
       <a role="button" class="">Trees and Heaps</a>
     </label>
   
@@ -380,8 +403,29 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-8f77ea5ed5ac3a1e1ccbb917c9b88705" class="toggle"  />
-    <label for="section-8f77ea5ed5ac3a1e1ccbb917c9b88705" class="flex justify-between">
+    <input type="checkbox" id="section-79a65790859c04b5ba458932d6c294ba" class="toggle"  />
+    <label for="section-79a65790859c04b5ba458932d6c294ba" class="flex justify-between">
+      <a role="button" class="">Classical Ml</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e10c19f2e4cd9c855621bc279c8a5bf6" class="toggle"  />
+    <label for="section-e10c19f2e4cd9c855621bc279c8a5bf6" class="flex justify-between">
       <a role="button" class="">Deep Learning</a>
     </label>
   
@@ -401,14 +445,27 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-4a2cc026b2befa1b8b1b496c3ea3dd19" class="toggle"  />
-    <label for="section-4a2cc026b2befa1b8b1b496c3ea3dd19" class="flex justify-between">
+    <input type="checkbox" id="section-d6b9e08eff0f17cdcec779174563a96a" class="toggle"  />
+    <label for="section-d6b9e08eff0f17cdcec779174563a96a" class="flex justify-between">
       <a role="button" class="">Theory</a>
     </label>
   
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ml/theory/probability_distributions/" class="">Common probability distributions</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -493,6 +550,10 @@ https://github.com/alex-shpak/hugo-book
     <li>
       <ul>
         <li><a href="#probabilistic-retrieval-from-a-fuzzy-set">probabilistic retrieval from a fuzzy set</a></li>
+        <li><a href="#implementing-a-bloom-filter-with-hash-functions">implementing a bloom filter with hash functions</a></li>
+        <li><a href="#false-positive-rates">false positive rates</a></li>
+        <li><a href="#optimal-settings-for-bloom-filters">optimal settings for bloom filters</a></li>
+        <li><a href="#implementing-it-in-python">implementing it in python</a></li>
       </ul>
     </li>
   </ul>
@@ -511,7 +572,72 @@ https://github.com/alex-shpak/hugo-book
   probabilistic retrieval from a fuzzy set
   <a class="anchor" href="#probabilistic-retrieval-from-a-fuzzy-set">#</a>
 </h2>
-<p><code>TODO</code></p>
+<p><a href="https://en.wikipedia.org/wiki/Bloom_filter">Bloom filters</a> are motivated by the following question: <em>how do we use a fixed amount of memory to check set-inclusion?</em></p>
+<p>As always there are tradeoffs. The tradeoff in this case is that we lose certainty &mdash; but what in life is certain, anyway?</p>
+<p>More formally, a bloom filter is a <em>probabilistic data structure</em> &mdash; a data structure that &mdash; which implements the following operations:</p>
+<ul>
+<li><code>insert(x)</code> &mdash; inidicate that an item <em>x</em> has been added into the set.</li>
+<li><code>query(x)</code> &mdash; check to see if an item <em>x</em> has been inserted into the bloom filter previously.</li>
+</ul>
+<p>Notably, the standard implementation of a Bloom filter does <em>not</em> implement an operation to remove an element from the structure, since erasing an item&rsquo;s inclusion from the set would also corrupt the inclusion queries for other items.</p>
+<h2 id="implementing-a-bloom-filter-with-hash-functions">
+  implementing a bloom filter with hash functions
+  <a class="anchor" href="#implementing-a-bloom-filter-with-hash-functions">#</a>
+</h2>
+<p>How do we implement Bloom filters? The short answer is with <em>hash functions</em> that map elements to addresses of a <em>memory bank</em> of bits.</p>
+<p>Imagine you have <em>m</em> bits labeled 1 to <em>m</em>, and <em>k</em> hash functions
+$$
+h_k: X \to \{1,\ldots,m\}
+$$
+so that there is little-to-no correlation between each hash function (this is important).</p>
+<p>Then the way we <code>insert</code> an element <em>x</em> is to compute all the hash values
+$$
+H(x) = \{ h_1(x), \ldots, h_k(x) \} \subset [m]
+$$
+and flip all of their bits from 0 to 1.</p>
+<p>When we query for the existence of <em>x</em> in the set represented by the Bloom filter, we compute <em>H(x)</em> again, and check that all the bits are equal to 1; if there is even a single zero bit in the hashed bits <em>H(x)</em>, we return <code>false</code> for the query.</p>
+<h2 id="false-positive-rates">
+  false positive rates
+  <a class="anchor" href="#false-positive-rates">#</a>
+</h2>
+<p>It&rsquo;s possible to get a false positive with Bloom filters (the filter says <em>x</em> is in the set, but it was never actually inserted).</p>
+<p>It&rsquo;s not possible to get false negatives (the filter says <em>x</em> is not in the set, but it&rsquo;s actually been inserted).</p>
+<p>What&rsquo;s the chance of getting one of these false positives? Well, if we&rsquo;re using <em>k</em> hash functions per element across <em>m</em> bits, we can do some basic math to find that the probability of a collision after inserting <em>n</em> elements is:
+$$
+\biggl( 1 - \exp\frac{-kn}{m} \biggr)^k
+$$</p>
+<h2 id="optimal-settings-for-bloom-filters">
+  optimal settings for bloom filters
+  <a class="anchor" href="#optimal-settings-for-bloom-filters">#</a>
+</h2>
+<p>Say we have a fixed budget of $m$ elements in our memorybank. How many hash functions should we be using to minimize the false positive rate?</p>
+<p>(Watch this space; this is a topic for a future update.)</p>
+<h2 id="implementing-it-in-python">
+  implementing it in python
+  <a class="anchor" href="#implementing-it-in-python">#</a>
+</h2>
+<p>In the below, we assume we can construct a set of hash functions based on big prime numbers and modular arithmetic; see <a href="https://www.cs.cornell.edu/courses/cs312/2008sp/lectures/lec21.html">this link</a> for the complicated details of how that&rsquo;s possible. But in general, designing hash functions is <em>hard</em>, and it&rsquo;s a vibrant field of algorithmics research to design excellent hash functions for various purposes &mdash; for instance, cryptographic security, low collision rates, et cetera.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BloomFilter</span>(object):
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Bloom filter implementation.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> __init__(self, numhashes, numbits):
+</span></span><span style="display:flex;"><span>	self<span style="color:#f92672">.</span>numhashes <span style="color:#f92672">=</span> numhashes
+</span></span><span style="display:flex;"><span>	self<span style="color:#f92672">.</span>numbits <span style="color:#f92672">=</span> numbits
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>hash_functions <span style="color:#f92672">=</span> [ ]
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(numhashes):
+</span></span><span style="display:flex;"><span>		hk <span style="color:#f92672">=</span> (<span style="color:#66d9ef">lambda</span> x: COEFF[k]<span style="color:#f92672">*</span>x <span style="color:#f92672">+</span> OFFSET[k] <span style="color:#f92672">%</span> BIGPRIME[k])
+</span></span><span style="display:flex;"><span>		self<span style="color:#f92672">.</span>hash_functions<span style="color:#f92672">.</span>append(hk)
+</span></span><span style="display:flex;"><span>	self<span style="color:#f92672">.</span>memory <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(numbits)]
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(self, x):
+</span></span><span style="display:flex;"><span>    bits <span style="color:#f92672">=</span> [ hf(x) <span style="color:#66d9ef">for</span> hf <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>hash_functions ]
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> bit <span style="color:#f92672">in</span> bits:
+</span></span><span style="display:flex;"><span>		self<span style="color:#f92672">.</span>memory[bit] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query</span>(self, x):
+</span></span><span style="display:flex;"><span>    bits <span style="color:#f92672">=</span> [ hf(x) <span style="color:#66d9ef">for</span> hf <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>hash_functions ]
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> all([self<span style="color:#f92672">.</span>memory[b] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> b <span style="color:#f92672">in</span> bits])</span></span></code></pre></div>
 </article>
  
       
@@ -520,6 +646,12 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex flex-wrap justify-between">
 
+
+  <div><a class="flex align-center" href="https://github.com/paultsw/algoland/commit/eed0dc3c9e5bbbc1146c6d76395a70b6ea5e91cb" title='Last modified by Paul Tang | February 8, 2024' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>February 8, 2024</span>
+    </a>
+  </div>
 
 
 
@@ -552,6 +684,10 @@ https://github.com/alex-shpak/hugo-book
     <li>
       <ul>
         <li><a href="#probabilistic-retrieval-from-a-fuzzy-set">probabilistic retrieval from a fuzzy set</a></li>
+        <li><a href="#implementing-a-bloom-filter-with-hash-functions">implementing a bloom filter with hash functions</a></li>
+        <li><a href="#false-positive-rates">false positive rates</a></li>
+        <li><a href="#optimal-settings-for-bloom-filters">optimal settings for bloom filters</a></li>
+        <li><a href="#implementing-it-in-python">implementing it in python</a></li>
       </ul>
     </li>
   </ul>

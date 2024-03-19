@@ -94,7 +94,7 @@
 + [ ] change of variables
 + [ ] precision-recall, f1, etc
 + [ ] type 1 and 2 errors (memorize entire table)
-+ [ ] Probability Distributions (memorize properties & pdfs/pmfs)
++ [-] Probability Distributions (memorize properties & pdfs/pmfs)
   - Bernoulli
   - Binomial
   - Normal
@@ -142,7 +142,7 @@
 + [ ] transitive closure
 + [ ] topological sort
 + [-] min span tree
-  - [X] kruskal's algorithm
+  - [-] kruskal's algorithm
   - [-] prim's algorithm
   - [ ] boruvka's algorithm (https://en.wikipedia.org/wiki/Bor%C5%AFvka%27s_algorithm)
 + [ ] steiner trees
@@ -173,7 +173,11 @@
   - spectral layout methods (using the spectral properties of the adjacency matrix)
   - force-based layout methods (using analogies to molecular mechanics)
 # --- probabilistic ds
-+ [-] bloom filters
++ [X] bloom filters
++ [ ] count sketch
++ [ ] count-min sketch
++ [ ] quotient filter
++ 
 # --- trees & heaps
 + [ ] traversals: in-order, post-order, pre-order
 + [ ] binary search trees

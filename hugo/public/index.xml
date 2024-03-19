@@ -6,7 +6,6 @@
     <description>Recent content in Welcome to Algoland! on Algo Land!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Feb 2024 21:48:22 -0500</lastBuildDate>
     <atom:link href="https://algorithm.land/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Binary Heaps and Priority Queues</title>
@@ -20,7 +19,14 @@
       <link>https://algorithm.land/docs/dsa/probabilistic/bloom_filters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://algorithm.land/docs/dsa/probabilistic/bloom_filters/</guid>
-      <description>probabilistic retrieval from a fuzzy set # TODO</description>
+      <description>probabilistic retrieval from a fuzzy set # Bloom filters are motivated by the following question: how do we use a fixed amount of memory to check set-inclusion?&#xA;As always there are tradeoffs. The tradeoff in this case is that we lose certainty &amp;mdash; but what in life is certain, anyway?&#xA;More formally, a bloom filter is a probabilistic data structure &amp;mdash; a data structure that &amp;mdash; which implements the following operations:</description>
+    </item>
+    <item>
+      <title>Common probability distributions</title>
+      <link>https://algorithm.land/docs/ml/theory/probability_distributions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://algorithm.land/docs/ml/theory/probability_distributions/</guid>
+      <description> Some common probability distributions and their properties # uniform (discrete and continuous) # bernoulli # binomial # normal (gaussian) # student-t # multinoulli # categorical # dirichlet # gumbel # type-1 gumbel # type-2 gumbel # weibull # chi-squared # logistic # laplace # cauchy # log-normal # pareto # gamma # special case of the gamma: exponential distribution # special case of the gamma: beta distribution # poisson # multivariate normal distribution # multivariate student t # </description>
     </item>
     <item>
       <title>Fibonacci Heaps</title>
